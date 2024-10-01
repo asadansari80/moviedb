@@ -3,7 +3,6 @@ import "./App.css";
 import Home from "./Pages/Home";
 import TopRated from "./Pages/TopRated";
 import Upcoming from "./Pages/Upcoming";
-import Details from "./Pages/Details";
 import Navbar from "./Component/Navbar/Navbar";
 import { Container } from "@mui/material";
 import MovieDetails from "./Pages/MovieDetails";
