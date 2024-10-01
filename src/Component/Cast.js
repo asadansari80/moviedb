@@ -27,8 +27,34 @@ const Cast = () => {
               width="90px"
               height="120px"
             />
-            <Typography>{data.original_name}</Typography>
-            <Typography fontSize="10px" color="grey">
+            <Typography
+              sx={{
+                maxWidth: "140px",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                display: "-webkit-box",
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical",
+                whiteSpace: "normal",
+                color: "white",
+              }}
+            >
+              {data.original_name}
+            </Typography>
+            <Typography
+              fontSize="10px"
+              color="grey"
+              sx={{
+                maxWidth: "140px",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                display: "-webkit-box",
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical",
+                whiteSpace: "normal",
+                color: "white",
+              }}
+            >
               Character{data.character}
             </Typography>
           </Box>
