@@ -50,16 +50,18 @@ const Navbar = (props) => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MovieDb
-      </Typography>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", bgcolor: "gray", height: "100%" }}
+    >
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item} disablePadding sx={{ color: "black" }}>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item.ulr} />
+              <NavLink to={item.url} className={"navLink"}>
+                <ListItemText primary={item.label} />
+              </NavLink>
             </ListItemButton>
           </ListItem>
         ))}
@@ -89,7 +91,7 @@ const Navbar = (props) => {
               component="div"
               sx={{
                 flexGrow: 1,
-                display: { xs: "none", sm: "block" },
+                display: { sm: "block" },
                 cursor: "pointer",
               }}
             >
@@ -125,7 +127,7 @@ const Navbar = (props) => {
               }}
               sx={{
                 mr: 2,
-                display: { xs: "none", sm: "block" },
+                display: { sm: "block" },
               }}
             />
 
@@ -134,7 +136,7 @@ const Navbar = (props) => {
               variant="contained"
               color="primary"
               onClick={handleSearchClick}
-              sx={{ display: { xs: "none", sm: "block" } }}
+              sx={{ display: { sm: "block" } }}
             >
               Search
             </Button>

@@ -39,7 +39,7 @@ const MovieDetails = () => {
   return (
     <Box padding={"10px"}>
       <Box>
-        <Box display={"flex"}>
+        <Box display={"flex"} flexWrap={"wrap"}>
           <Box width={"50%"}>
             <Box display="flex" padding={"10px"}>
               <Box padding={"10px"}>
@@ -88,7 +88,11 @@ const MovieDetails = () => {
             </Box>
           </Box>
           <Box>
-            <img src={IMAGE_BASE_URL + movieDetails?.backdrop_path} />
+            <img
+              src={IMAGE_BASE_URL + movieDetails?.backdrop_path}
+              width={"100%"}
+              height={"auto"}
+            />
           </Box>
         </Box>
       </Box>
